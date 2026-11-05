@@ -1,0 +1,37 @@
+{
+  "name": "surviq-stats",
+  "version": "1.0.0",
+  "description": "Survey and thesis statistics in TypeScript: Cronbach's alpha, McDonald's omega, KR-20, Aiken's V, CVC, Kendall's W, kappa, Shapiro-Wilk, t-test, Mann-Whitney, Wilcoxon, ANOVA, Kruskal-Wallis, chi-square, NPS, sample size and more. No dependencies.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "keywords": [
+    "statistics", "survey", "psychometrics", "thesis", "cronbach-alpha", "mcdonald-omega", "kr20", "aiken-v",
+    "content-validity", "kendall-w", "cohen-kappa", "fleiss-kappa", "shapiro-wilk", "t-test", "mann-whitney",
+    "wilcoxon", "anova", "kruskal-wallis", "chi-square", "nps", "sample-size", "likert"
+  ],
+  "homepage": "https://surviqapp.com/en/tools",
+  "repository": { "type": "git", "url": "git+https://github.com/enzocaminomontes-netizen/surviq-stats.git" },
+  "bugs": { "url": "https://github.com/enzocaminomontes-netizen/surviq-stats/issues" },
+  "author": "SurvIQ (https://surviqapp.com)",
+  "license": "MIT",
+  "engines": { "node": ">=18" },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vitest": "^3.0.0"
+  }
+}
