@@ -1,8 +1,8 @@
 name: Publish to npm
-# Runs when a GitHub release is published. Needs the NPM_TOKEN repository secret.
+# Runs when a version tag (v1.2.3) is pushed. Needs the NPM_TOKEN repository secret.
 on:
-  release:
-    types: [published]
+  push:
+    tags: ['v*']
 permissions:
   contents: read
   id-token: write
